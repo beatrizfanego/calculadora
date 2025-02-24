@@ -1,0 +1,242 @@
+.container {
+  width: 100%;
+}
+
+.titulo {
+  font-family: "Inter", serif;
+  color: #034051;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.erro {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block; /* Certifique-se de que a div .erro será exibida como um bloco */
+}
+
+form {
+  background-color: #034051;
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  font-family: "Inter", serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.empreendimentos select,
+.plantas select {
+  color: #034051;
+  font-family: "Inter", serif;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  padding: 6px;
+  flex: 1; /* O select ocupa o restante do espaço */
+  width: 100%; /* Garante que o select preencha todo o espaço do flex */
+  padding: 5px; /* Adiciona espaço interno */
+  box-sizing: border-box; /* Inclui padding e borda na largura total */
+  margin-top: 3px;
+  appearance: none; /* Remove a seta padrão */
+  -webkit-appearance: none; /* Remove a seta padrão no Safari */
+  -moz-appearance: none; /* Remove a seta padrão no Firefox */
+  padding-right: 25px; /* Espaço para a seta */
+  background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20viewBox%3D%220%200%202048%202048%22%20width%3D%22128%22%20height%3D%22128%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20transform%3D%22translate(244%2C510)%22%20d%3D%22m0%200h1552l32%201%2022%203%2010%203%2017%209%2011%209%208%208%2010%2014%208%2016%204%2012%202%2014v17l-2%2013-5%2013-8%2015-10%2014-11%2013-7%208-9%2010-48%2051-8%208-7%208-9%209-7%208-9%209-1%202h-2l-2%204-11%2011-1%202h-2l-2%204-11%2011-7%208-29%2031-8%208-1%202h-2l-2%204-11%2011-7%208-7%207-7%208-16%2017-9%209-1%202h-2l-2%204-15%2015-7%208-9%209-7%208-11%2011-7%208-7%207-7%208-10%2010-7%208-9%209-7%208-9%209-7%208-10%2010-7%208-8%208-7%208-14%2015-32%2034-14%2015-30%2032-16%2017-12%2012-7%208-9%209-1%202h-2l-2%204-14%2014-7%208-8%208-7%208-10%2010-7%208-10%2010-7%208-8%208-7%208-10%2010-7%208-8%208-7%208-14%2015-12%2013-8%208-7%208-8%208-7%208-8%208-7%208-9%209-7%208-22%2022-8%207-13%2010-10%206-17%208-16%205-17%203-11%201h-23l-24-5-19-8-13-8-13-10-12-11-23-23-7-8-32-34-7-7-7-8-7-7-7-8-7-7-7-8-30-32-36-39-11-11-7-8-10-10-7-8-9-9-7-8-10-10-7-8-13-13-7-8-11-11-7-8-9-9-7-8-9-9-7-8-11-11-7-8-8-8-7-8-8-8-7-8-7-7-7-8-9-9-7-8-7-7-7-8-15-16-11-12-11-11-7-8-10-10-7-8-9-9-7-8-11-11-7-8-13-13-7-8-10-10-7-8-9-9-7-8-9-9-7-8-15-15-7-8-5-5v-2h-2l-7-8-16-17-12-13-7-7-7-8-15-16-12-13-14-15-9-9-7-8-12-12-7-8-14-14-7-8-10-10-7-8-11-12-11-14-9-14-6-12-4-12-1-6v-21l3-16%205-14%206-12%209-12%209-9%2013-10%2018-10%2015-4%209-1z%22%20fill%3D%22%23616161%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Ajusta a posição da seta */
+  background-size: 13px; /* Ajusta o tamanho da seta */
+  cursor: pointer;
+}
+
+#empreendimentosTitulo,
+#plantasTitulo {
+  font-family: "Inter", serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.empreendimentos,
+.plantas {
+  padding-bottom: 15px;
+}
+
+.valorImovel,
+.entrada,
+.parcelas,
+.reforco,
+.outroWpp {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.parcelas {
+  margin-top: 5px;
+}
+
+#valorEntrada,
+#parcelas {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#valorEntrada::-webkit-slider-thumb,
+#parcelas::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(255, 217, 104);
+  cursor: pointer;
+}
+
+#valorEntrada::-moz-range-thumb,
+#parcelas::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgb(255, 217, 104);
+  cursor: pointer;
+}
+
+#valorImovel,
+#spanValorAtualEntrada,
+#valorAtualParcela,
+#spanValorReforco {
+  font-size: 32px;
+}
+
+#spanNumeroParcelas,
+#spanNumeroParcelasReforco {
+  font-size: 18px;
+}
+
+.opcaoProposta,
+.opcaoEntradaMaior,
+.opcaoParcelaMaior {
+  border: none;
+  background-color: #1a4754;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.opcaoProposta:hover,
+.opcaoEntradaMaior:hover,
+.opcaoParcelaMaior:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.opcaoProposta span,
+.opcaoEntradaMaior span,
+.opcaoParcelaMaior span {
+  white-space: pre-line; /* Permite quebras de linha */
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#contato input {
+  width: 100%; /* Garante que os inputs ocupem a largura total */
+  padding: 10px; /* Espaço interno para o texto do usuário */
+  border: none;
+  border-radius: 4px; /* Adiciona bordas arredondadas */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+  font-family: "Inter", serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.campo {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.enviar {
+  width: 100%; /* Garante que o botão ocupe a largura total */
+  padding: 10px; /* Adiciona espaçamento interno para o botão */
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #b3993d;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer; /* Cursor pointer ao passar o mouse sobre o botão */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.enviar:hover {
+  background-color: #cccccc;
+}
+
+.outraProposta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Garante que o botão ocupe a largura total */
+  margin-top: 15px;
+  padding: 10px; /* Adiciona espaçamento interno para o botão */
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #128c7e;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer; /* Cursor pointer ao passar o mouse sobre o botão */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.outraProposta::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 25px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="%23FFFFFF" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>');
+  background-size: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora de investimento</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="titulo">Calculadora de investimento</div>
+
+      <form action="" method="post">
+        <div class="empreendimentos">
+          <label for="empreendimentos" class="empreendimentosTitulo"
+            >Empreendimentos</label
+          >
+          <br />
+          <select name="empreendimentos" id="empreendimentos"></select>
+          <div class="erro"></div>
+        </div>
+
+        <div class="plantas">
+          <label for="plantas" class="plantasTitulo">Plantas</label> <br />
+          <select name="plantas" id="plantas"></select>
+          <div class="erro"></div>
+        </div>
+
+        <div class="valorImovel">
+          Valor do imóvel: <br />
+          <span id="valorImovel"></span>
+        </div>
+
+        <div class="entrada">
+          <label for="valorEntrada">Escolha o valor da entrada:</label> <br />
+          <span id="spanValorAtualEntrada">R$ 00,00</span> <br />
+          <input id="valorEntrada" type="range" />
+          <div class="valores-range">
+            <span id="valorMin" style="float: left"></span>
+            <span id="valorMax" style="float: right"></span>
+          </div>
+        </div>
+
+        <div class="parcelas">
+          <label for="parcelas">Valor das parcelas:</label><br />
+          <span id="spanNumeroParcelas"></span><br />
+          <span id="valorAtualParcela">R$ 00,00</span><br />
+          <input id="parcelas" type="range" min="1" max="84" /><br />
+          <div class="valores-range">
+            <span id="valorMinParcelas"></span>
+            <span id="valorMaxParcelas" style="float: right"></span>
+          </div>
+        </div>
+
+        <div class="reforco">
+          <label for="reforco">Reforço semestral:</label><br />
+          <span id="spanNumeroParcelasReforco">12x</span><br />
+          <span id="spanValorReforco">R$ 25.000,00</span>
+        </div>
+
+        <div class="opcoes">
+          <label for="propostaCliente" id="labelPropostaCliente"
+            >Proposta escolhida:</label
+          >
+
+          <div class="opcaoProposta">
+            <input type="radio" name="opcoes" id="propostaCliente" />
+            <span id="mensagemPropostaCliente"></span>
+            <br />
+          </div>
+
+          <label for="sugestoes">Sugestões</label>
+
+          <div class="opcaoEntradaMaior">
+            <input type="radio" name="opcoes" id="entradaMaior" />
+            <span id="mensagemEntradaMaior"></span><br />
+          </div>
+
+          <div class="opcaoParcelaMaior">
+            <input type="radio" name="opcoes" id="parcelaMaior" />
+            <span id="mensagemParcelaMaior"></span><br />
+          </div>
+
+          <div class="erro"></div>
+        </div>
+
+        <div id="contato">
+          <div class="campo">
+            <label for="nome"></label>
+            <input type="text" id="nome" name="nome" placeholder="Nome" />
+            <div class="erro"></div>
+          </div>
+
+          <div class="campo">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="E-mail" />
+            <div class="erro"></div>
+          </div>
+
+          <div class="campo">
+            <label for="telefone"></label>
+            <input
+              type="text"
+              id="telefone"
+              name="telefone"
+              placeholder="Telefone"
+            />
+            <div class="erro"></div>
+          </div>
+
+          <button
+            class="enviar"
+            type="submit"
+            onclick="return validarCamposContato()"
+          >
+            Enviar proposta
+          </button>
+
+          <div class="outroWpp">
+            <label for="outroWpp">Tem uma proposta diferente?</label>
+            <button class="outraProposta" onclick="return outraProposta()">
+              Nos chame!
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
